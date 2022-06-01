@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
-set shiftwidth=4 
 set autoindent 
+syntax on
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -29,12 +29,13 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
+Plugin 'davidhalter/jedi-vim'
 Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'editorconfig/editorconfig-vim'
-
+Plugin 'tmhedberg/SimpylFold'
 
 
 " All of your Plugins must be added before the following line
@@ -55,4 +56,13 @@ filetype plugin indent on    " required
 set expandtab
 set tabstop=4
 set background=dark
+set shiftwidth=4 
 hi CursorColumn cterm=none ctermbg=7 ctermfg=White
+
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
