@@ -1,3 +1,4 @@
+let g:CommandTPreferredImplementation='lua'
 set nocompatible              " be iMproved, required
 set autoindent 
 syntax on
@@ -36,6 +37,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'ludovicchabant/vim-gutentags'
 
 
 " All of your Plugins must be added before the following line
@@ -66,3 +68,4 @@ set foldlevel=99
 
 " Enable folding with the spacebar
 nnoremap <space> za
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
